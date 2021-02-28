@@ -1,0 +1,12 @@
+C:\Users\Kaivalya\source\repos\ContactsDirectory\DataAccessLayer\bin\Debug\netcoreapp3.1\DataAccessLayer.deps.json
+C:\Users\Kaivalya\source\repos\ContactsDirectory\DataAccessLayer\bin\Debug\netcoreapp3.1\DataAccessLayer.dll
+C:\Users\Kaivalya\source\repos\ContactsDirectory\DataAccessLayer\obj\Debug\netcoreapp3.1\DataAccessLayer.csprojAssemblyReference.cache
+C:\Users\Kaivalya\source\repos\ContactsDirectory\DataAccessLayer\obj\Debug\netcoreapp3.1\DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\Kaivalya\source\repos\ContactsDirectory\DataAccessLayer\obj\Debug\netcoreapp3.1\DataAccessLayer.AssemblyInfo.cs
+C:\Users\Kaivalya\source\repos\ContactsDirectory\DataAccessLayer\bin\Debug\netcoreapp3.1\DataAccessLayer.runtimeconfig.json
+C:\Users\Kaivalya\source\repos\ContactsDirectory\DataAccessLayer\bin\Debug\netcoreapp3.1\DataAccessLayer.runtimeconfig.dev.json
+C:\Users\Kaivalya\source\repos\ContactsDirectory\DataAccessLayer\obj\Debug\netcoreapp3.1\DataAccessLayer.genruntimeconfig.cache
+C:\Users\Kaivalya\source\repos\ContactsDirectory\DataAccessLayer\bin\Debug\netcoreapp3.1\DataAccessLayer.pdb
+C:\Users\Kaivalya\source\repos\ContactsDirectory\DataAccessLayer\obj\Debug\netcoreapp3.1\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Kaivalya\source\repos\ContactsDirectory\DataAccessLayer\obj\Debug\netcoreapp3.1\DataAccessLayer.dll
+C:\Users\Kaivalya\source\repos\ContactsDirectory\DataAccessLayer\obj\Debug\netcoreapp3.1\DataAccessLayer.pdb

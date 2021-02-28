@@ -1,0 +1,20 @@
+﻿.btn-round {
+    border-radius: 3rem;
+}
+
+.inputborder{
+    border-top:none;
+    border-left:none;
+    border-right:none;
+    border-bottom:solid 1px #c1bebe;
+    border-radius:0px;
+}
+
+    .imgsize {
+        width:30%;
+        height:auto;
+    }
+
+.cardstyle {
+    border-radius: 0px;
+}

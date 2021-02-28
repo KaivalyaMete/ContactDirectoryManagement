@@ -1,0 +1,105 @@
+﻿@model DataAccessLayer.ContactInformation
+
+@{
+    ViewData["Title"] = "EditContact";
+    List<SelectListItem> status = new List<SelectListItem>();
+    status.Add(new SelectListItem
+    {
+        Text = "Active",
+        Value = "Active",
+        Selected = true
+    });
+    status.Add(new SelectListItem
+    {
+        Text = "Inactive",
+        Value = "Inactive"
+    });
+}
+
+<div class="container-fluid">
+    <div class="row my-md-5 ">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-8 col-12 mx-auto" style=" margin-top: 20px;">
+                    <div class="card cardstyle shadow p-3 mb-5 bg-white">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col">
+                                    <center>
+                                        <h3>Edit Contact</h3>
+                                    </center>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <center>
+                                        <img class="rounded-circle imgsize" src="~/images/User-Icon.jpg" />
+                                    </center>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <hr />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <form asp-action="EditContact">
+                                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group form-row">
+                                                    <input asp-for="FirstName" placeholder="First Name" class="form-control inputborder" autofocus />
+                                                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group form-row">
+                                                    <input asp-for="LastName" placeholder="Last Name" class="form-control inputborder" />
+                                                    <span asp-validation-for="LastName" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group form-row">
+                                                    @Html.DropDownListFor(model => model.Status, status, new { @class = "form-control  inputborder" })
+                                                    <span asp-validation-for="Status" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group form-row">
+                                                    <input asp-for="ContactNumber" placeholder="Contact Number" class="form-control inputborder" />
+                                                    <span asp-validation-for="ContactNumber" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group form-row">
+                                                    <input asp-for="Email" placeholder="Email Address" class="form-control inputborder" />
+                                                    <span asp-validation-for="Email" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group  text-md-right">
+                                            <button type="submit" class="btn btn-primary btn-block btn-round">Update Contact</button>
+                                        </div>
+                                        <div class="form-group  text-md-right">
+                                            <a class="btn btn-block btn-danger btn-round" asp-controller="ContactDataManagement" asp-action="ListAllContacts">Cancel</a>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <link href="~/css/ContactManagement.css" rel="stylesheet" />
+}

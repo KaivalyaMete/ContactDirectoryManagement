@@ -1,0 +1,76 @@
+﻿@model IEnumerable<DataAccessLayer.ContactInformation>
+
+@{
+    ViewData["Title"] = "ListAllContacts";
+}
+
+<div class="container mt-3">
+    <div class="card" style="border-radius:unset;">
+        <div class="card-header bg-secondary" style="border-radius:unset;">
+            <div class="my-auto">
+                <h4 class="d-inline-block text-white">Contacts Directory</h4>
+                <div class="float-md-right mt-md-1">
+                    <a asp-action="CreateContact" asp-controller="ContactDataManagement" class="text-white" style="text-decoration:unset;"><i class="fas fa-id-card"></i> Create Contact</a>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive-sm" style="width:100%; margin:0 auto;">
+                <table id="userDatatable" class="table table-hover table-bordered order-column dt-responsive nowrap" width="100%" cellspacing="0">
+                    <thead
+                           
+                           >
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.FirstName)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.LastName)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Email)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.ContactNumber)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Status)
+                            </th>
+                            <th class="text-md-center">Edit</th>
+                            <th class="text-md-center">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.FirstName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.LastName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Email)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ContactNumber)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Status)
+                            </td>
+                            <td class="text-md-center">
+                                <a href="@Url.Action("EditContact","ContactDataManagement", new { id = item.Id })" style="color: dodgerblue;text-decoration:unset;"><i class="fas fa-edit"></i> </a>
+                            </td>
+                            <td class="text-md-center">
+                                <a href="@Url.Action("DeleteContact","ContactDataManagement", new { id = item.Id })" class="text-md-center" style="color: red; text-decoration:unset;"><i class="fas fa-trash-alt"></i> </a>
+                            </td>
+                        </tr>
+                        }
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
