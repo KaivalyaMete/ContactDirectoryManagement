@@ -38,5 +38,7 @@ The application has been configured  to run both ***Contacts Directory*** and **
   }
   ```
   Once the above configurations are done, Build and Run the application.
+  To access the contact directory , Select Contact Directory option in navigation menu.
+
 
 
